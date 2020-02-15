@@ -1,19 +1,17 @@
-# Projekt 2 Techniki Internetowe
+# Project Techniki Internetowe
 ### Piotr Kumala
 
-Projekt to prosta aplikacja do zbierania i analizowania danych pogodowych.
+Project is a simple web app to colect and analyse weather data.
 
-Warstwa serwerowa została zrealizowana w node.js express z silnikiem renderowania pug.
+Server side was developed in node.js express framework with pug rendering engine.
 
-Warstwa klienta została zrealizowana w HTML5, JS, CSS.
+Client side was developed in HTML5, JS, CSS.
 
-Aplikacja pozwala na dostęp w trybie off-line i on-line.
- 
-W trybie on-line aplikacja łączy się z bazą MongoDB.
-Natomiast off-line korzysta z IndexedDb.
+Application allows to work both on-line and off-line.
 
-Aplikacja została zaprojektowana do działania w przeglądarce Chrome.
+In on-line mode application connects to MongoDB database.
+In off-line mode application uses IndexedDb.
 
-W celu wystartowania serwera należy uruchomić komendę:
-- node /home/stud2017/7kumala/public_html/ProjektTechniki/bin/www.
-Serwer jest odpalany na porcie 4000.
+Application was developed and optimized to work in Chrome.
+
+Node.js server is set to run on port 4000.
