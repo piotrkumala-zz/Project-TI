@@ -1,0 +1,13 @@
+extends layout
+block content
+    h2.modal-header= title
+    div.error-group
+        p#error=error
+    form#loginForm
+        div.form-group
+            label(for='login') Login:
+            input#login.form-control(type='text', placeholder='login', name='login')
+        div.form-group
+            label(for='password') Hasło:
+            input#password.form-control(type='password', placeholder='hasło', name='password')
+        button#submit.btn-primary.form-control(type='button' onclick='sendLoginRequest()') Zaloguj się

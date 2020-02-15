@@ -1,0 +1,5 @@
+node_modules/
+bin/
+views/*.html
+public/bootstrap/
+

@@ -1,0 +1,12 @@
+
+.error-group{
+  font-weight: bolder;
+  color: red;
+}
+
+.remove_button_css {
+  outline: none;
+  padding: 5px;
+  border: 0px;
+  background-color: transparent;
+}

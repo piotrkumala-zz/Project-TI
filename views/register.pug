@@ -1,0 +1,17 @@
+extends layout
+block content
+    h2.modal-header= title
+    script(src="/javascripts/registerAJAX.js")
+    div.error-group
+        p#error=error
+    form#regiserForm
+        div.form-group
+            label(for='login') Login:
+            input#login.form-control(type='text', placeholder='login' name='login')
+        div.form-group
+            label(for='password') Hasło:
+            input#password.form-control(type='password', placeholder='hasło', name='password')
+        div.form-group
+            label(for='repeatPassword') Powtórz hasło:
+            input#repeatPassword.form-control(type='password', placeholder='hasło', name='password')
+        button#submit.btn-primary.form-control(type='button' onclick='sendRegisterRequest()') Stwórz Konto

@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href='/bootstrap/dist/css/bootstrap.min.css')
+
+
+  body.bg-light
+    script(src="/javascripts/layout.js")
+    script(src="/javascripts/loginAJAX.js")
+    nav.navbar.navbar-expand-lg.navbar-light.bg-primary
+      a.navbar-brand(href='/') Strona Główna
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a.nav-link(href='/weather/insert') Wprowadź dane
+        li.nav-item
+          button.nav-link.remove_button_css(onclick='getData()' ) Zobacz dane
+        li.nav-item
+          a.nav-link(href='/weather/charts') Analiza danych
+      if(!authorized)
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href="/users/login") Logowanie
+          li.nav-item
+            a.nav-link(href='/users/register')
+              span Rejestracja
+      else
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href="/users/logout") Wyloguj
+    div#contentDiv.modal-body
+      block content
+
+    footer.bd-footer.text-center &copy; 2020 Piotr Kumala

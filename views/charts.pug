@@ -1,0 +1,11 @@
+extends layout
+block content
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js')
+    script(src="/javascripts/drawCharts.js")
+    div.row
+        div.col-md-4.py-1
+            canvas#wykresTemperatury
+        div.col-md-4.py-1
+            canvas#wykresCisnienia
+        div.col-md-4.py-1
+            canvas#wykresWilgotnosci

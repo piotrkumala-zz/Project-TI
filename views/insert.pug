@@ -1,0 +1,23 @@
+extends layout
+block content
+    script(src='/javascripts/insertAJAX.js')
+    h2.modal-header= title
+    div.error-group
+        p#error=error
+    form#insertForm
+        div.form-group
+            label(for='miejscowosc') Miejscowość:
+            input#miejscowosc.form-control(type='text' placeholder='Miejscowość' name='miejscowosc')
+        div.form-group
+            label(for='data') Data wykonania pomiaru:
+            input#data.form-control(type='datetime-local' name='data')
+        div.form-group
+            label(for='temperatura') Temperatura:
+            input#temperatura.form-control(type= 'number' name='temperatura')
+        div.form-group
+            label(for='cisnienie') Ciśnienie:
+            input#cisnienie.form-control(type='number' name='cisnienie')
+        div.form-group
+            label(for='wilgotnosc') Wilgotność:
+            input#wilgotnosc.form-control(type='number' name='wilgotnosc')
+        button#submit.btn-primary.form-control(type='button' onclick='sendInsertRequest()') Zapisz
